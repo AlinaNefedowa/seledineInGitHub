@@ -21,9 +21,4 @@ public class GitHubTests {
         $(By.linkText("SoftAssertions")).shouldBe(visible).click();
         $$(".markdown-body").findBy(visible).shouldHave(text("Using JUnit5 extend test class"));
     }
-
 }
-
-//Задание
-//Есть ли разница между $("h1 div"); и $("h1").$("div"); - может ли привести к тому что, поиск найдёт разные элементы?
-//Разница есть.
