@@ -13,12 +13,12 @@ public class GitHubTests {
 
         open("https://github.com");
         $(".header-search-input").click();
-        $(".header-search-input").sendKeys("selenide");
+        $(".header-search-input").setValue("selenide");
         $(".header-search-input").submit();
-        $$("ul.repo-list li").first().$("a").click();
+        $("ul.repo-list li").$("a").click();
         $("#wiki-tab").click();
         $("#wiki-pages-filter").setValue("Soft");
-        $(By.linkText("SoftAssertions")).shouldBe(visible).click();
+        $(By.linkText("SoftAssertions")).click();
         $$(".markdown-body").findBy(visible).shouldHave(text("Using JUnit5 extend test class"));
     }
 }
